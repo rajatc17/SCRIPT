@@ -14,8 +14,8 @@ mail.select("INBOX")
 result, data = mail.uid('search', None, 'ALL')
 inbox = data[0].split()
 
-newest = inbox[-1]
-oldest = inbox[0]
+newest = inbox[-1]  # LATEST MAIL
+oldest = inbox[0]  # OLDEST MAIL
 
 r2, new = mail.uid('fetch', newest, '(RFC822)')
 r3, old = mail.uid('fetch', oldest, '(RFC822)')
